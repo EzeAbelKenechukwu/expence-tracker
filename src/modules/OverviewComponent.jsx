@@ -97,7 +97,7 @@ const AddTransactionView = (props) => {
         checked={type==="EXPENSE"}
         onChange={(e) => setType(e.target.value)}
         />
-        <label htmlFor="expense">Expence</label>
+        <label htmlFor="expense">Expense</label>
         <input 
         type="radio" 
         id="income" 
