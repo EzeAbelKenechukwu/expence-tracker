@@ -21,7 +21,7 @@ text-align: center;
 function App() {
   return (
     <Container>
-      <Header>Expence Tracker</Header>
+      <Header>Expense Tracker</Header>
       <HomeComponent/>
     </Container>
   )
