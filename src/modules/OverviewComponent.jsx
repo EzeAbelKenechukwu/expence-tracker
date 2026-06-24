@@ -37,7 +37,8 @@ border: 1px solid #e6e8e9;
 gap: 10px;
 width: 100%;
 padding: 15px 20px;
-margin: 20px;
+margin: 20px 0;
+box-sizing: border-box;
 
 & input{
 outline: none;
@@ -116,9 +117,13 @@ const AddTransactionView = (props) => {
 
 const ExpenseContainer = styled.div`
 display: flex;
-flex-direction: row;
 gap: 12px;
-margin: 20px;
+margin: 20px 0;
+width: 100%;
+
+@media (max-width: 480px) {
+  flex-direction: column;
+}
 `
 
 const ExpenseBox = styled.div`
@@ -127,7 +132,8 @@ flex-direction: column;
 padding: 15px 20px;
 border-radius: 4px;
 border: 1px solid #e6e8e9;
-width: 135px;
+width: 100%;
+flex: 1;
 font-size: 14px;
 
 & span{

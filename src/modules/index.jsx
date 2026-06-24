@@ -9,7 +9,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin: 30px 0 10px;
-width: 360px;
+width: 100%;
+max-width: 360px;
+padding: 0 15px;
+box-sizing: border-box;
 `;
 
 const HomeComponent = (propps) => {

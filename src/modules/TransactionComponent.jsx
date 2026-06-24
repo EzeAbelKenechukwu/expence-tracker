@@ -30,6 +30,8 @@ align-items: center;
 font-weight: normal;
 justify-content: space-between;
 width: 100%;
+box-sizing: border-box;
+word-break: break-word;
 border: 1px solid #e6e8e9;
 border-right: 4px solid ${(props) => (props.isExpense ? "red" : "green")};
 
