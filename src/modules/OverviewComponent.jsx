@@ -129,7 +129,8 @@ width: 100%;
 const ExpenseBox = styled.div`
 display: flex;
 flex-direction: column;
-padding: 15px 20px;
+flex: 1;
+padding: 15px 10px;
 border-radius: 4px;
 border: 1px solid #e6e8e9;
 width: 100%;
