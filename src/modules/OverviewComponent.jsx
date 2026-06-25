@@ -130,12 +130,12 @@ const ExpenseBox = styled.div`
 display: flex;
 flex-direction: column;
 flex: 1;
-padding: 15px 0px;
+padding: 15px 10px;
 border-radius: 4px;
 border: 1px solid #e6e8e9;
 width: 100%;
 flex: 1;
-font-size: 14px;
+font-size: 20px;
 
 & span{
 font-weight: bold;
