@@ -3,51 +3,52 @@ import { useState, useEffect } from "react";
 import OverviewComponent from "./OverviewComponent"
 import TransactionComponent from "./TransactionComponent"
 
-
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-margin: 30px 0 10px;
-width: 100%;
-max-width: 360px;
-padding: 0 15px;
-box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 720px;
+  gap: 16px;
+  padding: 0 0 24px;
+  box-sizing: border-box;
 `;
 
-const HomeComponent = (propps) => {
+const HomeComponent = () => {
   const [transactions, updateTransaction] = useState([])
   const [expense, updateExpense] = useState(0)
-   const [income, updateIncome] = useState(0)
+  const [income, updateIncome] = useState(0)
 
-  const addTransaction=(payload) =>{
-    const transactionArray=[...transactions];
-    transactionArray.push(payload)
-    updateTransaction( transactionArray);
+  const addTransaction = (payload) => {
+    updateTransaction((prev) => [...prev, payload])
   }
-  const calculateBalance = ()=> {
+
+  const calculateBalance = () => {
     let exp = 0;
     let inc = 0;
-    transactions.map((payload) => {
+
+    transactions.forEach((payload) => {
       payload.type === "EXPENSE"
-      ? (exp = exp + payload.amount)
-      :(inc = inc + payload.amount)
+        ? (exp = exp + payload.amount)
+        : (inc = inc + payload.amount)
     })
-    updateExpense (exp)
-    updateIncome (inc)
+
+    updateExpense(exp)
+    updateIncome(inc)
   }
 
-  useEffect (() =>calculateBalance (), [transactions])
-
+  useEffect(() => calculateBalance(), [transactions])
 
   return (
     <Container>
-      <OverviewComponent 
-      addTransaction={addTransaction}
-      expense={expense} 
-      income={income}/>
-      <TransactionComponent transactions={transactions}/>
+      <OverviewComponent
+        addTransaction={addTransaction}
+        expense={expense}
+        income={income}
+      />
+      <TransactionComponent transactions={transactions} />
     </Container>
   )
 }
+
 export default HomeComponent
