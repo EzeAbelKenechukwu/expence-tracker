@@ -13,8 +13,9 @@ const Container = styled.div`
   border: 1px solid rgba(226, 232, 240, 0.8);
 
   @media (max-width: 600px) {
-    padding: 16px;
+    padding: 14px;
     border-radius: 18px;
+    gap: 10px;
   }
 `;
 
@@ -23,6 +24,7 @@ const HeadingRow = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 `;
 
 const Title = styled.h2`
@@ -64,6 +66,11 @@ const Cell = styled.div`
   border-left: 4px solid ${(props) => (props.isExpense ? "#dc2626" : "#16a34a")};
   background: white;
   flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const Details = styled.div`
@@ -86,6 +93,10 @@ const Meta = styled.span`
 const Amount = styled.span`
   font-weight: 700;
   color: ${(props) => (props.isExpense ? "#dc2626" : "#16a34a")};
+
+  @media (max-width: 600px) {
+    align-self: flex-end;
+  }
 `;
 
 const EmptyState = styled.div`

@@ -14,8 +14,9 @@ const Container = styled.div`
   backdrop-filter: blur(8px);
 
   @media (max-width: 600px) {
-    padding: 16px;
+    padding: 14px;
     border-radius: 18px;
+    gap: 12px;
   }
 `;
 
@@ -33,6 +34,7 @@ const BalanceBox = styled.div`
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
   }
 `;
 
@@ -147,6 +149,8 @@ const ExpenseBox = styled.div`
   color: ${(props) => (props.isIncome ? "#047857" : "#dc2626")};
   font-size: 0.95rem;
   font-weight: 600;
+  min-height: 92px;
+  justify-content: center;
 
   span {
     font-size: 1.2rem;

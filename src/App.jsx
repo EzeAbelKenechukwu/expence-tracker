@@ -9,22 +9,24 @@ const Container = styled.div`
   min-height: 100vh;
   padding: 24px 16px 40px;
   box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    padding: 16px 12px 28px;
+  }
 `;
 
 const Hero = styled.div`
-  width: 100%;
-   margin-left: 40px;
-  max-width: 720px;
+  width: min(100%, 720px);
+  margin: 0 0 18px;
   background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
   color: white;
   border-radius: 24px;
   padding: 24px 20px;
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
-  margin-bottom: 18px;
   text-align: left;
 
   @media (max-width: 600px) {
-    padding: 20px 16px;
+    padding: 18px 16px;
     border-radius: 18px;
   }
 `;

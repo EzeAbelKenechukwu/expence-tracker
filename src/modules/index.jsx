@@ -7,11 +7,16 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: 100%;
+  width: min(100%, 720px);
   max-width: 720px;
   gap: 16px;
   padding: 0 0 24px;
   box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    gap: 12px;
+    padding-bottom: 16px;
+  }
 `;
 
 const HomeComponent = () => {
